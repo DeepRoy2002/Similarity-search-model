@@ -6,11 +6,9 @@ How FAISS Searches for Similar Vectors
 Indexing
 Vectors are stored in an efficient data structure based on the index type.
 Some indexes (like IVF) require training on a sample dataset before indexing.
-
 Querying
 A query vector is compared with indexed vectors using distance metrics.
 FAISS returns the top-K nearest neighbors.
-
 Optimization
 FAISS can use GPU acceleration for faster searches.
 It supports multi-threading for large-scale applications.
@@ -22,3 +20,8 @@ Scale-Space Extrema Detection
 The first step in SIFT is to find potential keypoints in an image at multiple scales (different levels of zoom). This is done by creating a scale-space, which is a series of images at different levels of blurring.
 The algorithm uses a Gaussian blur with varying levels of intensity to create a set of blurred images, called the Difference of Gaussian (DoG). By comparing the DoG images at different scales, the algorithm can identify locations that are likely to be keypoints.
 Keypoints are identified where there is a significant change in the pixel intensity, meaning they are distinct and stable across different scales.
+Why SIFT is Useful:
+a) Scale Invariance: SIFT can detect keypoints that are stable at different scales, so it can handle zooming in or out.
+b) Rotation Invariance: By assigning an orientation to each keypoint, SIFT is invariant to rotation. The same keypoint will be detected even if the image is rotated.
+c) Robustness: SIFT is robust to changes in lighting, partial occlusion, and small amounts of noise.
+d) Distinctiveness: The descriptors are designed to be highly distinctive, meaning that keypoints in different images are unlikely to have similar descriptors unless they correspond to the same object.
